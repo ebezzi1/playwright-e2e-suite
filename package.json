@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sabo2560/LambdaTestPlaywright.git"
+    "url": "git+https://github.com/ebezzi1/LambdaTestPlaywright.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Sabo2560/LambdaTestPlaywright/issues"
+    "url": "https://github.com/ebezzi1/LambdaTestPlaywright/issues"
   },
-  "homepage": "https://github.com/Sabo2560/LambdaTestPlaywright#readme",
+  "homepage": "https://github.com/ebezzi1/LambdaTestPlaywright#readme",
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
     "@playwright/test": "^1.55.0"

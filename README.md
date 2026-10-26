@@ -1,68 +1,43 @@
-# LambdaTest E-commerce Playground Playwright Test Suite
+# LambdaTest Playwright Suite
 
-This repository contains a Playwright test suite for the LambdaTest E-commerce Playground application.
+End-to-end tests written in Playwright + TypeScript for two LambdaTest demo sites. They run locally or on the LambdaTest cloud grid.
 
-## Project Selection
+- **E-commerce Playground**: registration, login, search and add-to-cart, built on the Page Object Model.
+- **Selenium Playground**: form input, validation and slider interactions.
 
-I selected the LambdaTest E-commerce Playground because it is a feature-rich web application with both frontend and backend components, making it an ideal candidate for demonstrating a comprehensive testing approach. It includes user authentication, product browsing, a shopping cart, and a checkout process, which are all critical user flows in an e-commerce application.
+## Quick start
 
-## How to Set Up and Run the Tests
+Requires Node.js 20.19+.
 
-### Prerequisites
-- Node.js (v20.19 or higher)
-- npm
-
-### Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Sabo2560/LambdaTestPlaywright.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd LambdaTestPlaywright
-   ```
-3. Install the dependencies:
-   ```bash
-   npm install
-   ```
-4. Install the Playwright browsers:
-   ```bash
-   npx playwright install
-   ```
-
-### Project Structure
-```
-tests/
-├── ecommerce/              # LambdaTest E-commerce Playground (Page Object Model)
-│   ├── pages/              # *.page.ts page objects
-│   └── specs/              # *.spec.ts test files
-└── selenium-playground/    # LambdaTest Selenium Playground demo forms
-```
-
-### Running the Tests
-To run the tests locally, use the following command:
 ```bash
+git clone https://github.com/ebezzi1/LambdaTestPlaywright.git
+cd LambdaTestPlaywright
+npm install
+npx playwright install
 npm test
 ```
 
-This will run all the tests in the `tests` directory.
+## Commands
 
-To run the tests on the LambdaTest cloud grid, copy `.env.example` to `.env`, fill in your LambdaTest username and access key, then run:
-```bash
-npm run test:lambdatest
+| Command | What it does |
+|---|---|
+| `npm test` | Run the suite locally in Chromium |
+| `npm run test:lambdatest` | Run on the LambdaTest grid (needs `.env`, see below) |
+| `npm run typecheck` | Type-check with TypeScript |
+| `npm run report` | Open the last HTML report |
+
+To run on LambdaTest, copy `.env.example` to `.env` and add your username and access key.
+
+## Layout
+
+```
+tests/
+├── ecommerce/
+│   ├── pages/              # page objects (*.page.ts)
+│   └── specs/              # tests (*.spec.ts)
+└── selenium-playground/    # demo-form tests
 ```
 
-To type-check the project:
-```bash
-npm run typecheck
-```
+## Notes
 
-To view the test report, use the following command:
-```bash
-npm run report
-```
-
-## Assumptions and Modifications
-- The tests are designed to be run against the live LambdaTest E-commerce Playground application.
-- The tests do not currently use any mock data or a dedicated test database.
-- The tests are designed to be run in a clean state (e.g., no items in the cart).
+The tests hit the live demo sites, so expect failures when those sites are down. There's no mock data, and the e-commerce tests generate fresh users with Faker. See [TEST_PLAN.md](TEST_PLAN.md) for scope and approach.
