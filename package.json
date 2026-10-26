@@ -1,5 +1,5 @@
 {
-  "name": "lambdatest-playwright",
+  "name": "playwright-e2e-suite",
   "version": "1.0.0",
   "description": "Playwright test suite for the LambdaTest E-commerce Playground and demo UI pages",
   "scripts": {
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ebezzi1/LambdaTestPlaywright.git"
+    "url": "git+https://github.com/ebezzi1/playwright-e2e-suite.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ebezzi1/LambdaTestPlaywright/issues"
+    "url": "https://github.com/ebezzi1/playwright-e2e-suite/issues"
   },
-  "homepage": "https://github.com/ebezzi1/LambdaTestPlaywright#readme",
+  "homepage": "https://github.com/ebezzi1/playwright-e2e-suite#readme",
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
     "@playwright/test": "^1.55.0"

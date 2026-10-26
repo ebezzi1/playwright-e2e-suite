@@ -1,4 +1,4 @@
-# LambdaTest Playwright Suite
+# Playwright E2E Suite
 
 End-to-end tests written in Playwright + TypeScript for two LambdaTest demo sites. They run locally or on the LambdaTest cloud grid.
 
@@ -10,8 +10,8 @@ End-to-end tests written in Playwright + TypeScript for two LambdaTest demo site
 Requires Node.js 20.19+.
 
 ```bash
-git clone https://github.com/ebezzi1/LambdaTestPlaywright.git
-cd LambdaTestPlaywright
+git clone https://github.com/ebezzi1/playwright-e2e-suite.git
+cd playwright-e2e-suite
 npm install
 npx playwright install
 npm test
