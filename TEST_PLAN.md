@@ -23,7 +23,7 @@ A hybrid testing approach will be adopted, with a primary focus on automated tes
 - **Manual Testing:** Exploratory testing will be conducted to discover edge cases and usability issues.
 
 ## 3. Test Environment Requirements
-- **Node.js:** v16 or higher
+- **Node.js:** v20.19 or higher
 - **Browsers:** Chromium, Firefox, WebKit (as supported by Playwright)
 - **Operating System:** Any OS that supports Node.js and Playwright (e.g., Windows, macOS, Linux)
 

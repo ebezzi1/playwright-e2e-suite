@@ -9,7 +9,7 @@ I selected the LambdaTest E-commerce Playground because it is a feature-rich web
 ## How to Set Up and Run the Tests
 
 ### Prerequisites
-- Node.js (v16 or higher)
+- Node.js (v20.19 or higher)
 - npm
 
 ### Setup
@@ -30,17 +30,36 @@ I selected the LambdaTest E-commerce Playground because it is a feature-rich web
    npx playwright install
    ```
 
+### Project Structure
+```
+tests/
+├── ecommerce/              # LambdaTest E-commerce Playground (Page Object Model)
+│   ├── pages/              # *.page.ts page objects
+│   └── specs/              # *.spec.ts test files
+└── selenium-playground/    # LambdaTest Selenium Playground demo forms
+```
+
 ### Running the Tests
-To run the tests, use the following command:
+To run the tests locally, use the following command:
 ```bash
-npx playwright test
+npm test
 ```
 
 This will run all the tests in the `tests` directory.
 
+To run the tests on the LambdaTest cloud grid, copy `.env.example` to `.env`, fill in your LambdaTest username and access key, then run:
+```bash
+npm run test:lambdatest
+```
+
+To type-check the project:
+```bash
+npm run typecheck
+```
+
 To view the test report, use the following command:
 ```bash
-npx playwright show-report
+npm run report
 ```
 
 ## Assumptions and Modifications

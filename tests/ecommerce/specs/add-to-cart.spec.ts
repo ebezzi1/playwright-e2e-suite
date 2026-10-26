@@ -1,14 +1,14 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/homePage';
-import { ProductPage } from '../pages/productPage';
+import { HomePage } from '../pages/home.page';
+import { SearchResultsPage } from '../pages/search-results.page';
 
 test.describe('Add to cart functionality', () => {
   let homePage: HomePage;
-  let productPage: ProductPage;
+  let searchResultsPage: SearchResultsPage;
 
   test.beforeEach(async ({ page }) => {
     homePage = new HomePage(page);
-    productPage = new ProductPage(page);
+    searchResultsPage = new SearchResultsPage(page);
   });
 
   test('should allow a user to add a product to the cart', async ({ page }) => {

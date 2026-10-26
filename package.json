@@ -1,10 +1,12 @@
 {
-  "name": "lambdatestplaywrightproject",
+  "name": "lambdatest-playwright",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Playwright test suite for the LambdaTest E-commerce Playground and Selenium Playground",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",
+    "test:lambdatest": "playwright test --config lambdatest-playwright.config.ts",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,12 @@
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
     "@playwright/test": "^1.55.0"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "devDependencies": {
+    "dotenv": "^18.0.9",
+    "typescript": "^7.0.2"
   }
 }

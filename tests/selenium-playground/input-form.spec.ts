@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Test Scenario 3', async ({ page }) => {
+test('Input Form requires fields and shows success after submit', async ({ page }) => {
   // 1. Open the https://www.lambdatest.com/selenium-playground page
   await page.goto('https://www.lambdatest.com/selenium-playground');
 
@@ -11,8 +11,10 @@ test('Test Scenario 3', async ({ page }) => {
   await page.click('button:has-text("Submit")');
 
   // 3. Assert “Please fill in the fields” error message
-  const errorMessage = await page.locator('input:invalid');
-  expect(errorMessage).toBeTruthy();
+  // The browser's native "Please fill in this field" bubble isn't in the DOM, so assert the validity state behind it
+  const nameInput = page.locator('#name');
+  expect(await nameInput.evaluate((input: HTMLInputElement) => input.validity.valueMissing)).toBe(true);
+  expect(await nameInput.evaluate((input: HTMLInputElement) => input.validationMessage)).not.toBe('');
 
   // 4. Fill in Name, Email, and other fields
   await page.fill('#name', 'John Doe');
