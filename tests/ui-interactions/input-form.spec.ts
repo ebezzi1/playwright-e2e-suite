@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Input Form requires fields and shows success after submit', async ({ page }) => {
-  // 1. Open the https://www.lambdatest.com/selenium-playground page
+  // 1. Open LambdaTest’s demo playground
   await page.goto('https://www.lambdatest.com/selenium-playground');
 
   // Click “Input Form Submit”

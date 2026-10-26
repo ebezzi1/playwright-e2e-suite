@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Simple Form Demo displays the entered message', async ({ page }) => {
-  // 1. Open LambdaTest’s Selenium Playground
+  // 1. Open LambdaTest’s demo playground
   await page.goto('https://www.lambdatest.com/selenium-playground');
 
   // 2. Click “Simple Form Demo”

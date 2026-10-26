@@ -3,7 +3,7 @@
 End-to-end tests written in Playwright + TypeScript for two LambdaTest demo sites. They run locally or on the LambdaTest cloud grid.
 
 - **E-commerce Playground**: registration, login, search and add-to-cart, built on the Page Object Model.
-- **Selenium Playground**: form input, validation and slider interactions.
+- **UI interactions**: form input, validation and slider tests against LambdaTest's demo pages.
 
 ## Quick start
 
@@ -35,7 +35,7 @@ tests/
 ├── ecommerce/
 │   ├── pages/              # page objects (*.page.ts)
 │   └── specs/              # tests (*.spec.ts)
-└── selenium-playground/    # demo-form tests
+└── ui-interactions/        # form, validation and slider tests
 ```
 
 ## Notes

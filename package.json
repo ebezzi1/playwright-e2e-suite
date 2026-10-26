@@ -1,7 +1,7 @@
 {
   "name": "lambdatest-playwright",
   "version": "1.0.0",
-  "description": "Playwright test suite for the LambdaTest E-commerce Playground and Selenium Playground",
+  "description": "Playwright test suite for the LambdaTest E-commerce Playground and demo UI pages",
   "scripts": {
     "test": "playwright test",
     "test:lambdatest": "playwright test --config lambdatest-playwright.config.ts",

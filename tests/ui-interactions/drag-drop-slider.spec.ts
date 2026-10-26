@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Drag & Drop slider can be moved from 15 to 95', async ({ page }) => {
-  // 1. Open the https://www.lambdatest.com/selenium-playground page
+  // 1. Open LambdaTest’s demo playground
   await page.goto('https://www.lambdatest.com/selenium-playground');
 
   // Click “Drag & Drop Sliders”
